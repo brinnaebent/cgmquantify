@@ -1,5 +1,6 @@
 MANIFEST.in
 README.rst
+setup.cfg
 setup.py
 cgmquantify/__init__.py
 cgmquantify.egg-info/PKG-INFO
