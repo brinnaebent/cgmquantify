@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+cgmquantify/__init__.py
+cgmquantify.egg-info/PKG-INFO
+cgmquantify.egg-info/SOURCES.txt
+cgmquantify.egg-info/dependency_links.txt
+cgmquantify.egg-info/not-zip-safe
+cgmquantify.egg-info/requires.txt
+cgmquantify.egg-info/top_level.txt
