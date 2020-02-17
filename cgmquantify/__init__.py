@@ -27,11 +27,11 @@ def interdaysd(df):
 def intradaycv(df):
     intradaycv = []
     for i in pd.unique(df['Day']):
-        intradaycv.append(cv(df[df['Day']==i]))
+        intradaycv.append(interdaycv(df[df['Day']==i]))
     
-    intradaycv_mean = np.mean(intradaysd)
-    intradaycv_median = np.median(intradaysd)
-    intradaycv_sd = np.std(intradaysd)
+    intradaycv_mean = np.mean(intradaycv)
+    intradaycv_median = np.median(intradaycv)
+    intradaycv_sd = np.std(intradaycv)
     
     return intradaycv_mean, intradaycv_median, intradaycv_sd
 
