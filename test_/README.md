@@ -1,1 +1,1 @@
-## Test data under the filename test_file.csv is de-identified data with time shifted data. This data is not meant to be utilized for research purposes, but rather as a way to verify that the package cgmquantify is functioning properly.
+## Test data under the filename test_file.csv is de-identified data that is time shifted. This data is not meant to be utilized for research purposes, but rather as a way to verify that the package cgmquantify is functioning properly.
