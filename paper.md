@@ -47,7 +47,7 @@ researchers and may provide additional insights to patients and clinicians about
 
 Continuous glucose monitoring (CGM) systems provide real-time, dynamic glucose information by tracking interstitial 
 glucose values throughout the day. CGMs are commonly used in diabetes management, with 1.2 million diabetic patients 
-using a CGM[@Wolinsky:2020]. CGM use has be associated with improved glycemic control in adults with type 1 diabetes
+using a CGM[@Wolinsky:2018]. CGM use has be associated with improved glycemic control in adults with type 1 diabetes
 [@Tamborlane:2008]. These devices 
 have been used extensively by the T1D community, including in the Open Artificial Pancreas System Project (OpenAPS)[@OpenAPS.org], 
 a project developed to create a patient-implemented closed loop system between a CGM and an insulin pump. 
@@ -71,7 +71,7 @@ different metrics of glucose variability. This resource should be available in a
 a low barrier to entry to encourage researchers, clinicians, and patients alike to explore CGM data. 
 #
 Previous open-source resources have been implemented in Excel[@Hill:2011] and R[@Vigers:2019; @Zhang:2018]. There is currently no comprehensive resource for 
-CGM data in Python, the third most common programming language used globally and the leading language among newcomers[@Krill]. 
+CGM data in Python, the third most common programming language used globally and the leading language among newcomers[@Krill:2019]. 
 Additionally, previous implementations of open source CGM data analysis have limited metrics of glucose variability. 
 Further, these methods are typically developed for a specific purpose and are therefore not extensible (e.g. do not have 
 simple functions so users can customize their metrics and visualizations).
@@ -110,7 +110,7 @@ understood about the relationships between glucose and glucose variability metri
 including but not limited to prediabetes, T2D, and severity of symptoms in T1D. As more researchers and clinicians start looking
 to CGM data to answer these questions, the need for a standardized resource in a nearly ubiquitous programming language is 
 necessary. As we have seen with the Open APS community, analysis of CGM data is not limited to researchers and clinicians but 
-includes patients themselves[@De Groot:2017]. By providing this as an open source resource, we hope to encourage patients to interact with 
+includes patients themselves[@DeGroot:2017]. By providing this as an open source resource, we hope to encourage patients to interact with 
 their own data, determine personalized insights, and make meaningful contributions to the digital health landscape. 
 
 # Future Implementations
