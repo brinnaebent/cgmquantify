@@ -130,6 +130,6 @@ and hypoglycemic (<70 mg/dL glucose) (b), and a plot with LOWESS smoothing of th
 ![cgmquantify Figures_Page_2](https://user-images.githubusercontent.com/43549914/74770470-541de100-525a-11ea-8631-a714bfbcf7ed.jpg)
 #
 **Table 1. Glucose and Glucose Variability Metrics** (* indicates previously unidentified metrics of glucose variability that are similar to clinically validated metrics)
-![cgmquantify Figures2_Page_3](https://user-images.githubusercontent.com/43549914/74771038-75330180-525b-11ea-9211-d1a0d036953f.jpg)
+![cgmquantify Figures2_Page_3](https://user-images.githubusercontent.com/43549914/74774845-774c8e80-5262-11ea-9155-80b87ca899a7.jpg)
 
 # References
