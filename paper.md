@@ -60,7 +60,7 @@ by clinical researchers[@Goldsack:2020]. Additionally, the provided glucose summ
 any information about an important clinical metric, glycemic variability.
 #
 Glycemic variability, also known as glucose variability, is an established risk factor for hypoglycemia[@Umpierrez:2018] and has been 
-shown to be a risk factor in diabetes complications[@Service:2018]. Glucose variability can be found in over 6,000 publications indexed 
+shown to be a risk factor in diabetes complications[@Service:2013]. Glucose variability can be found in over 6,000 publications indexed 
 in PubMed at the time of this publication and is a significant metric in clinical research[@Kovatchev:2017]. Over 20 metrics of glucose 
 variability have been identified (Table 1), which makes it difficult to examine and compare results across numerous research 
 studies analyzing and drawing conclusions about glucose variability. 
