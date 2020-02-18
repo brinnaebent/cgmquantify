@@ -134,6 +134,9 @@ cgmquantify is available on the Python Package Index https://pypi.org/project/cg
 GitHub: https://github.com/Big-Ideas-Lab/cgmquantify. We encourage others to expand on our ideas and contribute their own 
 glucose and glucose variability metrics to cgmquantify. We have documentation for contributing available in our User Guide.
 
+# Acknowledgements
+Brinnae Bent is funded through the Duke Forge Predoctoral Fellowship. This study was funded in part by Duke MedX.  
+
 # Figures
 
 **Figure 1. Visualizing longitudinal CGM data with the cgmquantify Python package.** Shown are a visualization with indicators 
