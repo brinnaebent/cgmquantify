@@ -49,7 +49,7 @@ Continuous glucose monitoring (CGM) systems provide real-time, dynamic glucose i
 glucose values throughout the day. CGMs are commonly used in diabetes management, with 1.2 million diabetic patients 
 using a CGM[@Wolinsky:2018]. CGM use has be associated with improved glycemic control in adults with type 1 diabetes
 [@Tamborlane:2008]. These devices 
-have been used extensively by the T1D community, including in the Open Artificial Pancreas System Project (OpenAPS)[@OpenAPS.org], 
+have been used extensively by the T1D community, including in the Open Artificial Pancreas System Project (OpenAPS)[@OpenAPS], 
 a project developed to create a patient-implemented closed loop system between a CGM and an insulin pump. 
 #
 CGM data is commonly provided from CGM manufacturers as either raw glucose values (in a .csv format) or in summary 
