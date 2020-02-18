@@ -51,31 +51,41 @@ using a CGM[@Wolinsky:2018]. CGM use has be associated with improved glycemic co
 [@Tamborlane:2008]. These devices 
 have been used extensively by the T1D community, including in the Open Artificial Pancreas System Project (OpenAPS)[@OpenAPS], 
 a project developed to create a patient-implemented closed loop system between a CGM and an insulin pump. 
-<br/>
+
+&nbsp;
+
 CGM data is commonly provided from CGM manufacturers as either raw glucose values (in a .csv format) or in summary 
 reports that utilize proprietary methods to plot and summarize glucose statistics (e.g. Dexcom Clarity currently shows 
 overall mean glucose, standard deviation of glucose, time in range, and hypoglycemia risk and daily minimum, maximum, 
 mean, and standard deviation of glucose). Because these algorithms are proprietary, they cannot be properly validated 
 by clinical researchers[@Goldsack:2020]. Additionally, the provided glucose summaries are extremely limited and do not usually contain 
 any information about an important clinical metric, glycemic variability.
-<br/>
+
+&nbsp;
+
 Glycemic variability, also known as glucose variability, is an established risk factor for hypoglycemia[@Umpierrez:2018] and has been 
 shown to be a risk factor in diabetes complications[@Service:2013]. Glucose variability can be found in over 6,000 publications indexed 
 in PubMed at the time of this publication and is a significant metric in clinical research[@Kovatchev:2017]. Over 20 metrics of glucose 
 variability have been identified (Table 1)[@Rawlings:2011; @Wojcicki:1995; @Kovatchev:2019; @ADA:2018], which makes it difficult to examine and compare results across numerous research 
 studies analyzing and drawing conclusions about glucose variability. 
-<br/>
+
+&nbsp;
+
 There is a need for an open source resource with algorithms that are utilized and validated in clinical research studies. 
 This would enable standardized glucose variability metrics and the ability to compare findings from studies that utilize 
 different metrics of glucose variability. This resource should be available in an open source programming language with 
 a low barrier to entry to encourage researchers, clinicians, and patients alike to explore CGM data. 
-<br/>
+
+&nbsp;
+
 Previous open-source resources have been implemented in Excel[@Hill:2011] and R[@Vigers:2019; @Zhang:2018]. There is currently no comprehensive resource for 
 CGM data in Python, the third most common programming language used globally and the leading language among newcomers[@Krill:2019]. 
 Additionally, previous implementations of open source CGM data analysis have limited metrics of glucose variability. 
 Further, these methods are typically developed for a specific purpose and are therefore not extensible (e.g. do not have 
 simple functions so users can customize their metrics and visualizations).
-<br/>
+
+&nbsp;
+
 We have developed a package written and published in Python under the MIT license. The package, cgmquantify, contains over 
 20 functions with more than 25 metrics summarizing glucose and glucose variability. It also includes code for visualizing 
 CGM data. The package is available under the Python Package Index (PyPI) (https://pypi.org/project/cgmquantify/). 
@@ -104,7 +114,9 @@ equations from clinically validated research studies so users can compare their 
 package is easily implemented with a one-line installation and an extensive user guide. Detailed documentation facilitates 
 modification of existing code for customization of input and visualizations. This package also has the ability to build a 
 community of developers to contribute to the literature in this burgeoning field.
-<br/>
+
+&nbsp;
+
 This is a much-needed resource for the community of researchers, clinicians, and patients using CGM. Currently, little is 
 understood about the relationships between glucose and glucose variability metrics from CGM data and relationships to diseases 
 including but not limited to prediabetes, T2D, and severity of symptoms in T1D. As more researchers and clinicians start looking
@@ -128,7 +140,9 @@ glucose and glucose variability metrics to cgmquantify. We have documentation fo
 of 1 SD from the mean and the mean glucose level (a), a visualization with indicators of hyperglycemic (>180 mg/dL glucose) 
 and hypoglycemic (<70 mg/dL glucose) (b), and a plot with LOWESS smoothing of the glucose data (c).
 ![cgmquantify Figures_Page_2](https://user-images.githubusercontent.com/43549914/74770470-541de100-525a-11ea-8631-a714bfbcf7ed.jpg)
-<br/>
+
+
+
 **Table 1. Glucose and Glucose Variability Metrics** (* indicates previously unidentified metrics of glucose variability that are similar to clinically validated metrics)
 ![cgmquantify Figures2_Page_3](https://user-images.githubusercontent.com/43549914/74774845-774c8e80-5262-11ea-9155-80b87ca899a7.jpg)
 
