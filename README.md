@@ -10,7 +10,7 @@ Here, we provide functions to calculate glucose summary metrics, glucose variabi
 #### [Issue Tracking](https://github.com/brinnaebent/cgmquantify/issues)
 
 #### Installation:
-* **Recommended:** pip install cgmanalysis
+* **Recommended:** pip install cgmquantify
 * If above does not work: pip install git+git://github.com/brinnaebent/cgmquantify.git
 * git clone [repo](https://github.com/brinnaebent/cgmquantify.git)
 
