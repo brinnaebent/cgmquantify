@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: cgmquantify
-Version: 0.2
+Version: 0.3
 Summary: Quantifying glucose and glucose variability from CGM devices
 Home-page: https://github.com/brinnaebent/cgmquantify
 Author: Brinnae Bent

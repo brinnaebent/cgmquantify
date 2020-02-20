@@ -11,7 +11,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     
 
 setup(name='cgmquantify',
-      version='0.2',
+      version='0.3',
       description='Quantifying glucose and glucose variability from CGM devices',
       long_description= ld,
       long_description_content_type= 'text/markdown',

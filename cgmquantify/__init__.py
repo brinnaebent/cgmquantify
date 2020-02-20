@@ -70,13 +70,13 @@ def MAGE(df, sd=1):
     up = np.mean(df['Glucose']) + sd*np.std(df['Glucose'])
     dw = np.mean(df['Glucose']) - sd*np.std(df['Glucose'])
     MAGE = np.mean(df[(df['Glucose']>= up) | (df['Glucose']<= dw)])
-    return MAGE[1]
+    return MAGE
 
 def MAGN(df, sd=1):
     up = np.mean(df['Glucose']) + sd*np.std(df['Glucose'])
     dw = np.mean(df['Glucose']) - sd*np.std(df['Glucose'])
     MAGN = np.mean(df[(df['Glucose']<= up) & (df['Glucose']>= dw)])
-    return MAGN[1]
+    return MAGN
 
 def J_index(df):
     J = 0.001*((np.mean(df['Glucose'])+np.std(df['Glucose']))**2)
