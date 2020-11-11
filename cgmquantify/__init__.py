@@ -66,17 +66,90 @@ def POR(df, sd=1, sr=5):
     POR = (TOR/(len(df)*sr))*100
     return POR
 
-def MAGE(df, sd=1):
+def MGE(df, sd=1):
     up = np.mean(df['Glucose']) + sd*np.std(df['Glucose'])
     dw = np.mean(df['Glucose']) - sd*np.std(df['Glucose'])
     MAGE = np.mean(df[(df['Glucose']>= up) | (df['Glucose']<= dw)])
     return MAGE
 
-def MAGN(df, sd=1):
+def MGN(df, sd=1):
     up = np.mean(df['Glucose']) + sd*np.std(df['Glucose'])
     dw = np.mean(df['Glucose']) - sd*np.std(df['Glucose'])
     MAGN = np.mean(df[(df['Glucose']<= up) & (df['Glucose']>= dw)])
     return MAGN
+
+def MAGE(df, std=1):
+        # Citations:
+        # Sneh Gajiwala: https://github.com/snehG0205/NCSA_genomics/tree/2bfbb87c9c872b1458ef3597d9fb2e56ac13ad64
+        
+        #extracting glucose values and incdices
+        glucose = df['Glucose'].tolist()
+        ix = [1*i for i in range(len(glucose))]
+        stdev = std
+        
+        # local minima & maxima
+        a = np.diff(np.sign(np.diff(glucose))).nonzero()[0] + 1      
+        # local min
+        valleys = (np.diff(np.sign(np.diff(glucose))) > 0).nonzero()[0] + 1 
+        # local max
+        peaks = (np.diff(np.sign(np.diff(glucose))) < 0).nonzero()[0] + 1         
+        # +1 -- diff reduces original index number
+
+        #store local minima and maxima -> identify + remove turning points
+        excursion_points = pd.DataFrame(columns=['Index', 'Time', 'Glucose', 'Type'])
+        k=0
+        for i in range(len(peaks)):
+            excursion_points.loc[k] = [peaks[i]] + [df['Time'][k]] + [df['Glucose'][k]] + ["P"]
+            k+=1
+
+        for i in range(len(valleys)):
+            excursion_points.loc[k] = [valleys[i]] + [df['Time'][k]] + [df['Glucose'][k]] + ["V"]
+            k+=1
+
+        excursion_points = excursion_points.sort_values(by=['Index'])
+        excursion_points = excursion_points.reset_index(drop=True)
+
+
+        # selecting turning points
+        turning_points = pd.DataFrame(columns=['Index', 'Time', 'Glucose', 'Type'])
+        k=0
+        for i in range(stdev,len(excursion_points.Index)-stdev):
+            positions = [i-stdev,i,i+stdev]
+            for j in range(0,len(positions)-1):
+                if(excursion_points.Type[positions[j]] == excursion_points.Type[positions[j+1]]):
+                    if(excursion_points.Type[positions[j]]=='P'):
+                        if excursion_points.Glucose[positions[j]]>=excursion_points.Glucose[positions[j+1]]:
+                            turning_points.loc[k] = excursion_points.loc[positions[j+1]]
+                            k+=1
+                        else:
+                            turning_points.loc[k] = excursion_points.loc[positions[j+1]]
+                            k+=1
+                    else:
+                        if excursion_points.Glucose[positions[j]]<=excursion_points.Glucose[positions[j+1]]:
+                            turning_points.loc[k] = excursion_points.loc[positions[j]]
+                            k+=1
+                        else:
+                            turning_points.loc[k] = excursion_points.loc[positions[j+1]]
+                            k+=1
+
+        if len(turning_points.index)<10:
+            turning_points = excursion_points.copy()
+            excursion_count = len(excursion_points.index)
+        else:
+            excursion_count = len(excursion_points.index)/2
+
+
+        turning_points = turning_points.drop_duplicates(subset= "Index", keep= "first")
+        turning_points=turning_points.reset_index(drop=True)
+        excursion_points = excursion_points[excursion_points.Index.isin(turning_points.Index) == False]
+        excursion_points = excursion_points.reset_index(drop=True)
+
+        # calculating MAGE
+        mage = turning_points.Glucose.sum()/excursion_count
+        
+        return round(mage,3)
+
+
 
 def J_index(df):
     J = 0.001*((np.mean(df['Glucose'])+np.std(df['Glucose']))**2)
