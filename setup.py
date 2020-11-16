@@ -11,11 +11,12 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     
 
 setup(name='cgmquantify',
-      version='0.4',
+      version='0.5',
       description='Quantifying glucose and glucose variability from CGM devices',
       long_description= ld,
       long_description_content_type= 'text/markdown',
       url='https://github.com/brinnaebent/cgmquantify',
+      #download_url='https://github.com/brinnaebent/cgmquantify/archive/0.4.tar.gz',
       author='Brinnae Bent',
       author_email='bmbent@ncsu.edu',
       license='MIT',
