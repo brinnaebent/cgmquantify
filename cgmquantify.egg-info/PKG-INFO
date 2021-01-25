@@ -1,6 +1,6 @@
-Metadata-Version: 1.0
+Metadata-Version: 2.1
 Name: cgmquantify
-Version: 0.3
+Version: 0.5
 Summary: Quantifying glucose and glucose variability from CGM devices
 Home-page: https://github.com/brinnaebent/cgmquantify
 Author: Brinnae Bent
@@ -18,7 +18,8 @@ Description:
         #### [Issue Tracking](https://github.com/brinnaebent/cgmquantify/issues)
         
         #### Installation:
-        * **Recommended:** pip install cgmanalysis
+        * **Recommended:** pip install cgmquantify
+        * If above does not work: pip install git+git://github.com/brinnaebent/cgmquantify.git
         * git clone [repo](https://github.com/brinnaebent/cgmquantify.git)
         
         #### Dependencies: (these will be downloaded upon installation with pip)
@@ -34,3 +35,4 @@ Description:
         
         
 Platform: UNKNOWN
+Description-Content-Type: text/markdown
