@@ -8,6 +8,7 @@ Here, we provide functions to calculate glucose summary metrics, glucose variabi
 
 This module currently works with [Dexcom G6 data](https://www.dexcom.com/get-started-cgm/111?sfc=7014y000000yxYNAAY&gclid=EAIaIQobChMI4ejrpLHQ7gIVhbzICh1ntQ2hEAAYASAAEgKghfD_BwE).
 
+The cgmquantify package is [now available in R!](https://CRAN.R-project.org/package=cgmquantify)
 
 #### [User Guide](https://github.com/brinnaebent/cgmquantify/wiki/User-Guide)
 #### [Issue Tracking](https://github.com/brinnaebent/cgmquantify/issues)
