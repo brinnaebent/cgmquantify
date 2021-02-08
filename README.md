@@ -6,6 +6,8 @@ Continuous glucose monitoring (CGM) systems provide real-time, dynamic glucose i
 
 Here, we provide functions to calculate glucose summary metrics, glucose variability metrics (as defined in clinical publications), and visualizations to visualize trends in CGM data.
 
+This module currently works with [Dexcom G6 data](https://www.dexcom.com/get-started-cgm/111?sfc=7014y000000yxYNAAY&gclid=EAIaIQobChMI4ejrpLHQ7gIVhbzICh1ntQ2hEAAYASAAEgKghfD_BwE).
+
 The cgmquantify package is [now available in R!](https://CRAN.R-project.org/package=cgmquantify) 
 
 #### [User Guide](https://github.com/brinnaebent/cgmquantify/wiki/User-Guide)
