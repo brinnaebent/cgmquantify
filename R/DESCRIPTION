@@ -1,0 +1,26 @@
+Package: cgmquantify
+Type: Package
+Title: R Package for Analyzing Glucose and Glucose Variability
+Version: 0.1.0
+Author: Maria Henriquez and Brinnae Bent
+Maintainer: Maria Henriquez <marhenriq@gmail.com>
+Imports: dplyr, tidyverse, ggplot2, hms, stats, magrittr
+Description: Continuous glucose monitoring (CGM) systems provide real-time, 
+  dynamic glucose information by tracking interstitial glucose values 
+  throughout the day. Glycemic variability, also known as glucose variability, 
+  is an established risk factor for hypoglycemia (Kovatchev) and 
+  has been shown to be a risk factor in diabetes complications. 
+  Over 20 metrics of glycemic variability have been identified. 
+  Here, we provide functions to calculate glucose summary metrics, 
+  glucose variability metrics (as defined in clinical publications), 
+  and visualizations to visualize trends in CGM data.
+License: MIT License + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat (>= 2.0.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 2, devtools
+VignetteBuilder: knitr

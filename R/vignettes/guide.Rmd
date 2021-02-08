@@ -1,0 +1,52 @@
+---
+title: "User Guide"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{User Guide}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup}
+library(cgmquantify)
+```
+
+## Using cgmquantify package:
+
+### Formatting data for input
+
+Before reading in your dataframe with the readfile function, please make sure the .csv file has the following Dexcom CGM format:
+
+* A column **Timestamp (YYYY-MM-DDThh:mm:ss)** representing the timestamps of the glucose measurements in the specified format. 
+* A column **Glucose Value (mg/dL)** containing glucose measurements from CGM.
+* The official glucose measurements start on row 12. 
+
+Once this has been done, your .csv file should be read easily with the readfile function. Please read your .csv file with the readfile function before using the rest of the functions to avoid possible errors.
+
+### Functions currently available
+
+* readfile(data) - reads in a .csv with format specified above and turns it into data frame suitable for further package analysis
+* eA1c(data)- computes estimated A1c, according to American Diabetes Association calculator
+* GMI(data) - computes glycemic management indicator
+* interdaycv(data) - computes interday coefficient of variation
+* interdaysd(data) - computes interday standard deviation
+* intradaycv(data) - computes intraday coefficient of variation: mean, median, standard deviadtion of all days in data
+* intradaysd(data) - computes intraday standard deviation: mean, median, standard deviation of all days in data
+* J_index(data) - computes the glycemic variability metric, J-index
+* LBGI(data) - computes glycemic variability metric low blood glucose index
+* HBGI(data) - computes glycemic variability metric high blood glucose index
+* LBGI_HBGI(data) - computes LBGI and HBGI and returns both values in a data frame
+* MGE(data, sd=1) - computes the mean of glycemic excursions, glycemic excursions indicated by standard deviation, default = 1
+* MGN(data, sd=1) - computes the mean of normal glucose, glycemic excursions indicated by standard deviation, default = 1
+* plot_gluocse(data) - plots glycemic excursions over the time period in which data was collected.
+* POR(data, sd=1, sr=5) - computes percent of time outside range (range in standard deviations from mean, default = 1). sr is the sampling rate inverse in minutes of the CGM (default is the Dexcom -> 5 minutes)
+* summary_glucose(data) - computes the mean, median, minimum, maximum, first quartile, and the third quartile of an indidividual's overall glucose levels and returns value in data frame
+* TIR(data, sd=1, sr=5) - computes time inside range (range in standard deviations from mean, default = 1). sr is the sampling rate inverse in minutes of the CGM (default is the Dexcom -> 5 minutes)
+* TOR(data, sd=1, sr=5) - computes time outside range (range in standard deviations from mean, default = 1). sr is the sampling rate inverse in minutes of the CGM (default is the Dexcom -> 5 minutes)
+
+### Functions coming soon
+
+* MODD(data) - computes meean of daily differences in glucose
+* ADRR(data) - computes Average Daily Risk Range, assessment of total daily glucose variations within risk space
+* CONGA24(data) - computes continuous overall net glycemic action over 24 hours
+* MAGE(data, std=1) - computes the mean amplitude of glycemic excursions, glycemic excursions indicated by standard deviation, default = 1; calculation following Baghurst's algorithm for MAGE
