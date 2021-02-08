@@ -138,10 +138,10 @@ and hypoglycemic (<70 mg/dL glucose) (b), and a plot with LOWESS smoothing of th
 
 **Figure 2. Visualizing longitudinal CGM data with the cgmquantify R package.** Shown is a visualization available in the cgmquantify 
 R package that enables visualization of CGM data by time of day for each day specified.
-![cgmquantify Figures_Page_2](https://user-images.githubusercontent.com/43549914/74770470-541de100-525a-11ea-8631-a714bfbcf7ed.jpg)
+![Figure2](https://user-images.githubusercontent.com/43549914/107248137-ff8deb80-69ff-11eb-9943-303b5117efa1.jpg)
 
 
 **Table 1. Glucose and Glucose Variability Metrics** 
-![cgmquantify Figures2_Page_3](https://user-images.githubusercontent.com/43549914/74774845-774c8e80-5262-11ea-9155-80b87ca899a7.jpg)
+![Table1](https://user-images.githubusercontent.com/43549914/107248016-e5eca400-69ff-11eb-8170-9b75495915a9.jpg)
 
 # References
