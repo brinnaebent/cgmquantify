@@ -14,8 +14,8 @@ The cgmquantify package is [now available in R!](https://CRAN.R-project.org/pack
 #### [Issue Tracking](https://github.com/brinnaebent/cgmquantify/issues)
 
 #### Installation:
-* **Recommended:** pip install cgmquantify
-* If above does not work: pip install git+git://github.com/brinnaebent/cgmquantify.git
+* **Recommended:** pip install cgmquantify-updated
+* If above does not work: pip install git+https://github.com/brinnaebent/cgmquantify.git
 * git clone [repo](https://github.com/brinnaebent/cgmquantify.git)
 
 #### Dependencies: (these will be downloaded upon installation with pip)
