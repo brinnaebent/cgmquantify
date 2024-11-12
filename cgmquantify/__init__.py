@@ -4,41 +4,41 @@ import numpy as np
 import matplotlib.pyplot as plt
 from statsmodels.nonparametric.smoothers_lowess import lowess
 
-    """
-        cgmquantify package
-        Description:
-        The cgmquantify package is a comprehensive library for computing metrics from continuous glucose monitors.
+"""
+    cgmquantify package
+    Description:
+    The cgmquantify package is a comprehensive library for computing metrics from continuous glucose monitors.
 
-        Requirements:
-        pandas, datetime, numpy, matplotlib, statsmodels
+    Requirements:
+    pandas, datetime, numpy, matplotlib, statsmodels
 
-        Functions:
-        importdexcom(): Imports data from Dexcom continuous glucose monitor devices
-        interdaycv(): Computes and returns the interday coefficient of variation of glucose
-        interdaysd(): Computes and returns the interday standard deviation of glucose
-        intradaycv(): Computes and returns the intraday coefficient of variation of glucose 
-        intradaysd(): Computes and returns the intraday standard deviation of glucose 
-        TIR(): Computes and returns the time in range
-        TOR(): Computes and returns the time outside range
-        PIR(): Computes and returns the percent time in range
-        POR(): Computes and returns the percent time outside range
-        MGE(): Computes and returns the mean of glucose outside specified range
-        MGN(): Computes and returns the mean of glucose inside specified range
-        MAGE(): Computes and returns the mean amplitude of glucose excursions
-        J_index(): Computes and returns the J-index
-        LBGI(): Computes and returns the low blood glucose index
-        HBGI(): Computes and returns the high blood glucose index
-        ADRR(): Computes and returns the average daily risk range, an assessment of total daily glucose variations within risk space
-        MODD(): Computes and returns the mean of daily differences. Examines mean of value + value 24 hours before
-        CONGA24(): Computes and returns the continuous overall net glycemic action over 24 hours
-        GMI(): Computes and returns the glucose management index
-        eA1c(): Computes and returns the American Diabetes Association estimated HbA1c
-        summary(): Computes and returns glucose summary metrics, including interday mean glucose, interday median glucose, interday minimum glucose, interday maximum glucose, interday first quartile glucose, and interday third quartile glucose
-        plotglucosesd(): Plots glucose with specified standard deviation lines
-        plotglucosebounds(): Plots glucose with user-defined boundaries
-        plotglucosesmooth(): Plots smoothed glucose plot (with LOWESS smoothing)
-                
-    """
+    Functions:
+    importdexcom(): Imports data from Dexcom continuous glucose monitor devices
+    interdaycv(): Computes and returns the interday coefficient of variation of glucose
+    interdaysd(): Computes and returns the interday standard deviation of glucose
+    intradaycv(): Computes and returns the intraday coefficient of variation of glucose 
+    intradaysd(): Computes and returns the intraday standard deviation of glucose 
+    TIR(): Computes and returns the time in range
+    TOR(): Computes and returns the time outside range
+    PIR(): Computes and returns the percent time in range
+    POR(): Computes and returns the percent time outside range
+    MGE(): Computes and returns the mean of glucose outside specified range
+    MGN(): Computes and returns the mean of glucose inside specified range
+    MAGE(): Computes and returns the mean amplitude of glucose excursions
+    J_index(): Computes and returns the J-index
+    LBGI(): Computes and returns the low blood glucose index
+    HBGI(): Computes and returns the high blood glucose index
+    ADRR(): Computes and returns the average daily risk range, an assessment of total daily glucose variations within risk space
+    MODD(): Computes and returns the mean of daily differences. Examines mean of value + value 24 hours before
+    CONGA24(): Computes and returns the continuous overall net glycemic action over 24 hours
+    GMI(): Computes and returns the glucose management index
+    eA1c(): Computes and returns the American Diabetes Association estimated HbA1c
+    summary(): Computes and returns glucose summary metrics, including interday mean glucose, interday median glucose, interday minimum glucose, interday maximum glucose, interday first quartile glucose, and interday third quartile glucose
+    plotglucosesd(): Plots glucose with specified standard deviation lines
+    plotglucosebounds(): Plots glucose with user-defined boundaries
+    plotglucosesmooth(): Plots smoothed glucose plot (with LOWESS smoothing)
+            
+"""
 
 def importdexcom(filename):
     """
