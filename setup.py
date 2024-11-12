@@ -10,7 +10,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     ld = f.read()
     
 
-setup(name='cgmquantify_updated',
+setup(name='cgmquantify',
       version='0.5.1',
       description='Quantifying glucose and glucose variability from CGM devices',
       long_description= ld,
@@ -18,7 +18,7 @@ setup(name='cgmquantify_updated',
       url='https://github.com/MengdeLiu/CGM_quantify',
       download_url='https://github.com/yourusername/yourrepo/archive/refs/tags/v0.5.1.tar.gz',
       author='Brinnae Bent',
-      author_email='bmbent@ncsu.edu',
+      author_email='brinnae.bent@duke.edu',
       license='MIT',
       packages=['cgmquantify'],
       install_requires=['pandas','numpy','matplotlib','datetime','statsmodels',
